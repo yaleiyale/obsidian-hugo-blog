@@ -1,0 +1,15 @@
+{{- define "content" -}}
+<h1 class="list-title">{{- .Title -}}</h1>
+<p>已写下 {{- sub (len .Site.RegularPages) 7 -}} 篇，长路漫漫</p>
+<!-- vega图 -->
+{{- partial "partof-archive/draw-vega.html" . -}}
+<!-- 归档列表 -->
+<div class="toc-content">
+{{- partial "partof-archive/list.html" . -}}
+</div>
+{{- end -}}
+
+{{- define "plugin" -}}
+<!-- 目录 -->
+{{- partial "toc.html" . -}}
+{{- end -}}

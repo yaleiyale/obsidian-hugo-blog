@@ -1,0 +1,131 @@
+baseURL = 'http://lestua.eu.org/'
+languageCode = 'zh'
+title = '时砂凝几页'
+theme = 'atlas'
+defaultContentLanguage = 'zh'
+ignoreFiles = ["模板$", ".excalidraw.md$", ".u8$"]
+hasCJKLanguage = true
+copyright = " 2021-{year} yaleiyale"
+pluralizelisttitles = false
+[taxonomies]
+tag = "tags"
+[outputs]
+home = ["HTML", "JSON"]
+[markup.goldmark.renderer]
+unsafe = true
+[params.sidebar]
+avatarURL = 'https://i.imgur.com/Sx5vDKz.png'
+timeFrom = "07/23/2022 10:59:03"
+description = '''
+书事<br>唐·王维<br>
+  轻阴阁小雨，
+  <a href="mailto:deilookout@outlook.com">
+    <i class="fa-solid fa-envelope fa-fw fa-bounce"></i>
+  </a>
+  <br/>
+  深院昼慵开。
+  <a href="https://github.com/yaleiyale">
+    <i class="fa-brands fa-github fa-fw fa-bounce"></i>
+  </a>
+  <br/>
+  坐看苍苔色，
+  <a href="https://www.acfun.cn/u/31661560">
+    <i class="fa-solid fa-otter fa-fw fa-bounce"></i>
+  </a>
+  <br/>
+  欲上人衣来。
+  <a href="https://space.bilibili.com/357477198">
+    <i class="fa-brands fa-bilibili fa-fw fa-bounce"></i>
+  </a>'''
+[params.donate]
+colaURL = "https://i.imgur.com/9kSi9ER.png"
+donateParams = '''
+<script>
+        var myname = "yaleiyale";
+        var profile = "https://i.imgur.com/Sx5vDKz.png";
+        var usage = "payment";
+        var wechat = "wxp://f2f0dsQlAhlj8JhTvCFKDc06potIJmAlC6Egb5iwzbEuuVA";
+        var tenpay = "https://i.qianbao.qq.com/wallet/sqrcode.htm?m=tenpay&f=wallet&a=1&ac=CAEQ_d7U6wgYgpb1lgZCIDk4MGU5NTgxYjYwMmVmMjRhMGI4NzE2OTQzMzEzMWU0_xxx_sign&u=2373267325&n=fidget";
+        var alipay = "https://qr.alipay.com/fkx15566l3ytwvk3t7bgd40";
+        var paypal = "https://paypal.me/";
+        var multilingual = false;
+        var branding = false;
+        var title = "选择你的支付方式";
+        var subtitle = "跟随进一步的指示以向" + myname + "付款";
+        var qrcodeapi = "https://www.zhihu.com/qrcode?url=";
+</script>'''
+[params.right]
+licenseURL = "https://creativecommons.org/licenses/by/4.0/deed.zh"
+licenseName = "CC BY 4.0（除特别声明和转载）"
+[params.index]
+separatorh = "<!-- .slide -->"
+separatorv = "<!-- .slide vertical=true -->"
+[params.waline]
+reactionTitle = 'REACTION'
+placeholder = '匿名可行 但说无妨'
+sofa = '🈚'
+serverURL = 'https://lestua.cn.eu.org'
+reaction = [
+  'https://i.imgur.com/8hUUTzl.png',
+  'https://i.imgur.com/YwoatB7.png',
+  'https://i.imgur.com/8zdTsHc.png',
+]
+[params]
+thumbsup = '''由
+<a href="https://gohugo.io/">hugo</a>
+<a href="https://obsidian.md/">obsidian</a> 驱动'''
+[params.music]
+server = "netease"
+type = "playlist"
+id = "7751556455"
+order = "random"
+lrc = "0"
+[params.live2d]
+mode = "fixed" #static, static, draggable
+hidden = true
+link = ["/wormhole"]
+skin = ["要换成我的朋友吗？", "让她放个假吧~"]
+referer = "哇哦，从 %t 穿越来的！"
+custom = '''[{ "selector": "a", "type": "link" },
+{ "selector": "#cola", "text": "打赏要理性哦😻" },
+{ "selector": "img:not(#lamuimg, #leimuimg)", "text": "click🎉" },
+{ "selector": ".wl-reaction", "text": "我来要赞咯🌟" },
+{ "selector": "#wl-edit", "text": "文明发言，不然会被🚫哦" },
+{ "selector": "#wl-mail", "text":"填邮箱可以显示Gravatar，收到评论回复邮件提醒哦🍉"},
+{ "selector": ".highlight", "text": "代码可以一键复制呢🔖" },
+{ "selector": ".sidebar-toggle", "text": "打开侧边栏叭🗂️" },
+{ "selector": ".effect-info", "text": "哇，你发现了什么❗" },
+{ "selector": "#sidebar-search-input", "text": "想搜索什么呢❓" },
+{ "selector": ".note-title", "text": "这是标题✨" },
+{ "selector": ".article-nav", "text": "再逛一会叭🎈~" },
+{ "selector": ".social-share", "text": "分享分享😏" }]'''
+model = [
+  "https://lestua.eu.org/web_kanbanniang_collection/umaru/model.json",
+  "https://lestua.eu.org/web_kanbanniang_collection/rem/model.json",
+  "https://lestua.eu.org/web_kanbanniang_collection/koharu/model.json",
+  "https://lestua.eu.org/web_kanbanniang_collection/kurumi/model.json",
+]
+[[menu.main]]
+name = '<i class="fa-solid fa-comment fa-fw"></i> 留言'
+url = "/board"
+weight = "1"
+[[menu.main]]
+name = '<i class="fa-solid fa-seedling fa-fw"></i> 聚点'
+url = '/road'
+weight = "2"
+[[menu.main]]
+name = '<i class="fa-solid fa-archive fa-fw"></i> 归档'
+url = '/archive'
+weight = "3"
+[[menu.main]]
+name = '<i class="fa-solid fa-tags fa-fw"></i> 标签'
+url = '/tags'
+weight = "4"
+[[menu.main]]
+name = '<i class="fa-solid fa-circle-nodes fa-fw"></i> 图谱'
+url = '/atlas'
+weight = "5"
+[[menu.main]]
+name = '<i class="fa-solid fa-coffee fa-fw"></i> 打赏'
+url = '/donate'
+weight = "6"

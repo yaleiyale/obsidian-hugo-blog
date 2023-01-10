@@ -1,0 +1,17 @@
+{{- partial "vega.html" . -}}
+{{- $.Scratch.Add "tags" slice -}}
+{{- range .Site.Taxonomies.tags.ByCount -}}
+{{- if hasPrefix .Term "游戏/" -}}
+{{- $.Scratch.Add "tags" (dict "gametag" (strings.TrimPrefix "游戏/" .Term) "count" .Count) -}}
+{{- end -}}
+{{- end -}}
+<script>
+    vegaEmbed("#vis",
+        {
+            "data": { "values": {{- $.Scratch.Get "tags" | jsonify -}} },
+        "encoding": {
+        "y": { "field": "gametag", "type": "nominal" },
+        "x": { "field": "count", "type": "quantitative" }
+    },
+        "mark": "bar"})
+</script>

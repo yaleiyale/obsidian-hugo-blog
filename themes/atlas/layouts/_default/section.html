@@ -1,0 +1,19 @@
+{{- define "content" -}}
+<h1 class="list-title">{{- .Title -}}</h1>
+<link rel="stylesheet" href="/css/deep-url.css">
+{{- range .Pages -}}
+{{- if .IsSection -}}
+<div>
+    <a class="deep-url" href="{{- .Permalink -}}"><i class="fa-solid fa-box"></i>{{- .Title -}}</a>
+</div>
+{{- end -}}
+{{- end -}}
+{{- range .Pages -}}
+{{- if .IsSection -}}
+{{- else -}}
+<div>
+    <a style="margin:0.8rem ;" href="{{- .Permalink -}}"><i class="fa-solid fa-leaf"></i>{{- .Title -}}</a>
+</div>
+{{- end -}}
+{{- end -}}
+{{- end -}}

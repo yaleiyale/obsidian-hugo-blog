@@ -1,0 +1,16 @@
+{{- partial "vega.html" . -}}
+{{- $.Scratch.Add "archive" slice -}}
+{{- range .Site.RegularPages -}}
+{{- $.Scratch.Add "archive" (dict "title" .Title "permalink" .Permalink "date" .Date) -}}
+{{- end -}}
+<script>
+    vegaEmbed("#vis",
+        {
+            "data": { "values": {{- $.Scratch.Get "archive" | jsonify -}}},
+        "encoding": {
+        "y": { "field": "date", "timeUnit": "month", "type": "ordinal" },
+        "x": { "field": "date", "timeUnit": "year" },
+        "color": { "field": "date", "aggregate": "count" }
+    },
+        "mark": "rect"})
+</script>

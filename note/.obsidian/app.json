@@ -1,0 +1,11 @@
+{
+  "trashOption": "local",
+  "alwaysUpdateLinks": true,
+  "newFileLocation": "current",
+  "attachmentFolderPath": "./",
+  "userIgnoreFilters": [
+    "模板/"
+  ],
+  "showInlineTitle": false,
+  "strictLineBreaks": true
+}

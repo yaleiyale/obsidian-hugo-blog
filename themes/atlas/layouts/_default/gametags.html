@@ -1,0 +1,30 @@
+{{- define "content" -}}
+<h1 class="list-title">{{- .Title -}}</h1>
+<link rel="stylesheet" href="/css/tag.css">
+<link rel="stylesheet" href="/css/deep-url.css">
+<!-- 统计标签个数 -->
+{{- $.Scratch.Add "tags" slice -}}
+{{- range .Site.Taxonomies.tags.ByCount -}}
+{{- if hasPrefix .Term "游戏/" -}}
+{{- $.Scratch.Add "tags" .Term -}}
+{{- end -}}
+{{- end -}}
+<p>当前有标签{{- len ($.Scratch.Get "tags") -}}个</p>
+<div id="statistics-container">
+    <!-- 统计图 -->
+    {{- partial "partof-gametags/draw-vega.html" . -}}
+    <!-- 标签云 -->
+    <side>
+        {{- partial "partof-gametags/tag-cloud.html" . -}}
+    </side>
+</div>
+<!-- 标签列表 -->
+<div class="toc-content">
+    {{- partial "partof-gametags/list.html" . -}}
+</div>
+{{- end -}}
+
+{{- define "plugin" -}}
+<!-- 标签目录 -->
+{{- partial "toc.html" . -}}
+{{- end -}}

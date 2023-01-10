@@ -1,0 +1,19 @@
+<link href="https://cdn.bootcdn.net/ajax/libs/viewerjs/1.11.1/viewer.min.css" rel="stylesheet">
+<script src="https://cdn.bootcdn.net/ajax/libs/viewerjs/1.11.1/viewer.min.js"></script>
+<script type="text/javascript">
+    var content = document.querySelector("article");
+    if (content) {
+        var list = content.querySelectorAll("img");
+        if (list) {
+            var imgCount = list.length;
+            var imgNow;
+            var viewer = [];
+            if (imgCount > 0) {
+                for (var i = 0; i < imgCount; i++)
+                {
+                    imgNow = list[i];
+                    viewer[i] = new Viewer(imgNow);
+                }
+            }
+        }
+    }</script>

@@ -1,0 +1,13 @@
+{{- range .Data.Terms.Alphabetical -}}
+{{- if hasPrefix .Term "游戏/" -}}
+{{- else -}}
+<span class='tag-cloud'>
+    <a class="deep-url" href="{{- .Page.RelPermalink -}}">
+        <span style="font-size: {{- add 1 (mul .Count 0.085) -}}rem; 
+            color: #{{- mod (add 111 (mul .Count 123 )) 1000 -}};">
+            {{- .Page.Title -}}</span></a>
+</span>
+{{- end -}}
+{{- end -}}
+<br>
+<div style="margin-top: 2rem;"><a href="/gametags">VG分区</a></div>

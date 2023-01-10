@@ -1,0 +1,9 @@
+{{- define "content" -}}
+<h1 class="list-title">{{- .Title -}}</h1>
+<!-- 列表 -->
+{{- range .Pages -}}
+<div>
+    <a href="{{- .Permalink -}}">{{- .Title -}}</a>
+</div>
+{{- end -}}
+{{- end -}}

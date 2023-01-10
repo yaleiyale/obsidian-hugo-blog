@@ -1,0 +1,186 @@
+{
+  "main": {
+    "id": "c67427033b62bad9",
+    "type": "split",
+    "children": [
+      {
+        "id": "d0f79bbf03e5d82e",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "248f62b72ef359d2",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "笔记与博客/obsidian使用/obsidian中的markdown书写范例实例.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "dbcb5683715cb67f",
+    "type": "split",
+    "children": [
+      {
+        "id": "d64b5f015e6ab6c5",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "fe492c4e8031dcdd",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "497d79c36377e583",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "8785a3796d2532ec",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
+            }
+          },
+          {
+            "id": "91cbb9e594009dfa",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "3c24b40dd7cd1ba1",
+    "type": "split",
+    "children": [
+      {
+        "id": "f03a1ebe2ccabcac",
+        "type": "tabs",
+        "dimension": 48.77450980392157,
+        "children": [
+          {
+            "id": "c7930d3692988b42",
+            "type": "leaf",
+            "state": {
+              "type": "recent-files",
+              "state": {}
+            }
+          },
+          {
+            "id": "bdf9eef0f77edf25",
+            "type": "leaf",
+            "state": {
+              "type": "advanced-tables-toolbar",
+              "state": {}
+            }
+          }
+        ]
+      },
+      {
+        "id": "32663539f0b303f1",
+        "type": "tabs",
+        "dimension": 51.225490196078425,
+        "children": [
+          {
+            "id": "deb128aef779b79a",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "笔记与博客/obsidian使用/obsidian中的markdown书写范例实例.md"
+              }
+            }
+          },
+          {
+            "id": "23629b398460c96f",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "笔记与博客/obsidian使用/obsidian中的markdown书写范例实例.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": true,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "2783bc7a4d4809ea",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "笔记与博客/obsidian使用/obsidian中的markdown书写范例实例.md",
+                "linksCollapsed": true,
+                "unlinkedCollapsed": true
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "graph:查看关系图谱": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false,
+      "zk-prefixer:创建时间戳笔记": false,
+      "audio-recorder:开始/结束录音": false,
+      "obsidian-excalidraw-plugin:新建 Excalidraw 绘图": false
+    }
+  },
+  "active": "248f62b72ef359d2",
+  "lastOpenFiles": [
+    "笔记与博客/obsidian使用/obsidian插件使用存档.md",
+    "游戏杂录/EPIC值得一玩/EPIC值得一玩.md",
+    "闪念/202301101624.md",
+    "日记/2023-01-10.md",
+    "游戏杂录/EPIC值得一玩/库/Spirit of the North.md",
+    "游戏杂录/EPIC值得一玩/库/DARQ.md",
+    "游戏杂录/EPIC值得一玩/库/Automachef.md",
+    "游戏杂录/EPIC值得一玩/库/A Short Hike.md",
+    "游戏杂录/EPIC值得一玩/库/Severed Steel.md",
+    "游戏杂录/EPIC值得一玩/库/Shadow of the Tomb Raider.md"
+  ]
+}

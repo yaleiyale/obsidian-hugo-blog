@@ -1,0 +1,8 @@
+<i class="fa-solid fa-calendar-plus fa-fw"></i> {{- .Date.Format "2006-01-02 03:04 Monday" -}}
+<i class="fa-solid fa-file-word fa-fw"></i>{{- .WordCount -}}
+<i class="fa-solid fa-clock fa-fw"></i>{{- .ReadingTime -}} min
+<br>
+<i class="fab fa-creative-commons-by fa-fw"></i>
+<a href="{{- .Site.Params.right.licenseURL | safeHTML -}}" rel="license">{{- .Site.Params.right.licenseName -}}</a>
+<br>
+<br>

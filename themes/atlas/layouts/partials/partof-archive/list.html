@@ -1,0 +1,18 @@
+{{- range (.Site.RegularPages.GroupByDate "2006") -}}
+<!-- 年份 -->
+<h2 id="{{- .Key -}}">{{- .Key -}}</h2>
+{{- $year := .Key -}}
+{{- range .Pages.GroupByDate "January" -}}
+<!-- 月份 -->
+<h3 id="{{- $year -}} {{- .Key -}}">{{- .Key -}}</h3>
+<ul class="archive-list">
+    {{- range .Pages -}}
+    <!-- 博文列表 -->
+    <li>
+        {{- .PublishDate.Format " 02 Jan,Mon " -}}
+        <a href="{{- .RelPermalink -}}">{{- .Title -}}</a>
+    </li>
+    {{- end -}}
+</ul>
+{{- end -}}
+{{- end -}}

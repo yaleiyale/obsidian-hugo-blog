@@ -1,0 +1,26 @@
+.stickies {
+    float: none;
+}
+
+.stickies2 {
+    float: none;
+}
+
+.to-recall {
+    float: none;
+    padding: 0.25rem;
+}
+
+.to-recall::before {
+    content: "";
+}
+
+.to-recall::after {
+    content: "";
+}
+
+span.cm-strong,
+:not(font)>strong,
+.cm-s-obsidian .cm-highlight.cm-strong {
+    font-size: 1.25rem;
+}

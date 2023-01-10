@@ -1,0 +1,16 @@
+<div class="sidebar-info" style="font-size: 0.775rem;">
+    <!-- 运行时间 -->
+    {{- partial "partof-sidebar/timefrom.html" . -}}
+    <!-- 不蒜子 页面统计，看不懂可不改 -->
+    {{- partial "partof-sidebar/busuanzi.html" . -}}
+    <!-- 鸣谢 -->
+    <div>
+        <i class="fa-solid fa-thumbs-up fa-fw"></i>
+        {{- .Site.Params.thumbsup |safeHTML -}}
+    </div>
+    <!-- 版权声明 -->
+    <div>
+        <i class="fa-solid fa-copyright fa-fw"></i>
+        {{- replace .Site.Copyright "{year}" now.Year -}}
+    </div>
+</div>

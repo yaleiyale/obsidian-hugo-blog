@@ -1,0 +1,41 @@
+<div>
+    <i class="fa-solid fa-cog fa-spin fa-fw"></i>
+    <span id="run_time_day">
+    </span>天
+    <span id="run_time_hour">
+    </span>时
+    <span id="run_time_minute">
+    </span>分
+    <span id="run_time_second">
+    </span>秒
+    <script>
+        setInterval(function (d, h, m, s, b) {
+            function setzero(i) {
+                return i < 10 ? "0" + i : i;
+            }
+            let BirthDay = new Date(b);
+            let today = new Date();
+            let timeold = (today.getTime() - BirthDay.getTime());
+            let sectimeold = timeold / 1000;
+            let secondsold = Math.floor(sectimeold);
+            let msPerDay = 24 * 60 * 60 * 1000;
+            let e_daysold = timeold / msPerDay;
+            let daysold = Math.floor(e_daysold);
+            let e_hrsold = (e_daysold - daysold) * 24;
+            let hrsold = Math.floor(e_hrsold);
+            let e_minsold = (e_hrsold - hrsold) * 60;
+            let minsold = Math.floor((e_hrsold - hrsold) * 60);
+            let seconds = Math.floor((e_minsold - minsold) * 60);
+            d.textContent = daysold;
+            h.textContent = setzero(hrsold);
+            m.textContent = setzero(minsold);
+            s.textContent = setzero(seconds);
+        },
+            1000,
+            document.getElementById("run_time_day"),
+            document.getElementById("run_time_hour"),
+            document.getElementById("run_time_minute"),
+            document.getElementById("run_time_second"),
+            {{- .Site.Params.sidebar.timeFrom -}},)
+    </script>
+</div>

@@ -1,0 +1,14 @@
+<input type="checkbox" id="sidebar-checkbox">
+<label for="sidebar-checkbox" class="sidebar-toggle"></label>
+<div class="sidebar">
+    <!-- 头像与文本 -->
+    {{- partial "partof-sidebar/sidebar-top-info.html" . -}}
+    <!-- 搜索 -->
+    {{- partial "partof-sidebar/search.html" . -}}
+    <!-- 导肮 -->
+    {{- partial "partof-sidebar/nav.html" . -}}
+    <!-- 侧边栏底部信息 -->
+    {{- partial "partof-sidebar/sidebar-bottom-info.html" . -}}
+    <!-- 移动端侧边栏，可选 -->
+    <script src="https://cdn.jsdelivr.net/gh/yaleiyale/atlas_blog_theme_js@main/mobiletap.js" defer="defer"></script>
+</div>

@@ -1,0 +1,29 @@
+<style>
+    .toc {
+        position: fixed;
+        left: 80vw;
+        top: 5rem;
+        height: 70vh;
+    }
+
+    .toc-link {
+        text-decoration: none;
+    }
+
+    @media only screen and (max-width: 540px) {
+        .toc {
+            display: none;
+        }
+    }
+</style>
+<ol class="toc"></ol>
+<link href="https://cdn.bootcdn.net/ajax/libs/tocbot/4.19.0/tocbot.min.css" rel="stylesheet">
+<script src="https://cdn.bootcdn.net/ajax/libs/tocbot/4.19.0/tocbot.min.js"></script>
+<script>
+    tocbot.init({
+        tocSelector: '.toc',
+        contentSelector: '.toc-content',
+        headingSelector: 'h1, h2, h3, h4, h5, h6',
+        hasInnerContainers: true,
+    });
+</script>

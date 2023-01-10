@@ -1,0 +1,26 @@
+<link rel="stylesheet" href="https://cdn.staticfile.org/waline/2.14.1/waline.min.css" />
+<script src="https://cdn.staticfile.org/waline/2.14.1/waline.min.js"></script>
+<style>
+    @media only screen and (min-width: 540px) {
+        #waline {
+            max-width: 60vw;
+            margin: auto;
+        }
+    }
+</style>
+<div id="waline"></div>
+<script>
+(function(){
+    const locale = {
+        placeholder: {{- .Site.Params.waline.placeholder -}},
+        sofa: {{- .Site.Params.waline.sofa -}},
+        reactionTitle: {{- .Site.Params.waline.reactionTitle -}},
+    };
+    Waline.init({
+        el: '#waline',
+        serverURL: {{- .Site.Params.waline.serverURL -}},
+        reaction: {{- .Site.Params.waline.reaction -}},
+        locale,
+    });
+})()
+</script>

@@ -1,0 +1,16 @@
+{{- define "content" -}}
+<h1 class="note-title">{{- .Title -}}</h1>
+<link rel="stylesheet" href="/css/obsidianlink.css">
+<link rel="stylesheet" href="/css/blue-topaz.css">
+<!-- front matter -->
+{{- partial "partof-single/front-matter.html" . -}}
+<article class="toc-content">
+    <!-- 格式化内容 -->
+    {{- partial "partof-single/content.html" . -}}
+</article>
+{{- end -}}
+
+{{- define "plugin" -}}
+<!-- 内容页通用插件 -->
+{{- partial "partof-single/single-plugin.html" . -}}
+{{- end -}}

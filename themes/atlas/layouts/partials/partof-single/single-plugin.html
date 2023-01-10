@@ -1,0 +1,17 @@
+<!-- 路由、分享、打赏 -->
+{{- partial "partof-single/single-plugin/end-article.html" . -}}
+<!-- 评论模块 -->
+{{- partial "waline.html" . -}}
+<!-- 外部链接 -->
+{{- partial "partof-single/single-plugin/backlink.html" . -}}
+<!-- 目录模块 -->
+{{- partial "toc.html" . -}}
+<!-- 链接预览 -->
+{{- partial "partof-single/single-plugin/preview.html" . -}}
+<!-- 特殊渲染：公式、mermaid、标注 -->
+{{- partial "partof-single/single-plugin/tools.html" . -}}
+<!-- 查看图片 -->
+{{- partial "partof-single/single-plugin/image-viewer.html" . -}}
+<!-- 代码复制按钮 -->
+<script src="https://cdn.jsdelivr.net/gh/yaleiyale/atlas_blog_theme_js@main/copy.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yaleiyale/atlas_blog_theme_js@main/copy.css">

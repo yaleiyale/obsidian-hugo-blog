@@ -1,0 +1,27 @@
+<style>
+    .end-article {
+        text-align: center;
+        margin: 2rem auto;
+        width: fit-content;
+    }
+</style>
+<div class="end-article">
+    <div class="article-nav" style="margin-bottom:1.5rem ;">
+        {{- with .NextInSection -}}
+        <a href="{{- .Permalink -}}"><i class="fa-solid fa-left-long fa-beat"
+                style="font-size: 2rem;margin: 1rem 1.2rem;"></i></a>
+        {{- end -}}
+        <a href="/archive"><i class="fa-solid fa-star-of-david fa-beat"
+                style="font-size: 2rem;margin: 1rem 1.2rem;"></i></a>
+        {{- with .PrevInSection -}}
+        <a href="{{- .Permalink -}}"><i class="fa-solid fa-right-long fa-beat"
+                style="font-size: 2rem;margin: 1rem 1.2rem;"></i></a>
+        {{- end -}}
+    </div>
+    <!-- 分享 -->
+    {{- partial "share.html" . -}}
+    <!-- cola -->
+    <a id="cola" href="/donate">
+        <img src="{{- .Site.Params.donate.colaURL -}}" alt="BuyMeACola" width="180" style="margin: auto;">
+    </a>
+</div>

@@ -1,0 +1,32 @@
+name: github pages # 名字自取
+
+on:
+  push:
+    branches:
+      - main  # 这里的意思是当 main分支发生push的时候，运行下面的jobs，这里先改为github-actions
+
+jobs:
+  deploy: # 任务名自取
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          persist-credentials: false
+
+      - name: Setup Hugo	# 步骤名自取
+        uses: peaceiris/actions-hugo@v2	# hugo官方提供的action，用于在任务环境中获取hugo
+        with:
+          hugo-version: 'latest'	# 获取最新版本的hugo
+          # extended: true
+
+      - name: Build
+        run: hugo --minify	# 使用hugo构建静态网页
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3	# 一个自动发布github pages的action
+        with:
+          external_repository: yaleiyale/yaleiyale.github.io	# 发布到哪个repo
+          personal_token: ${{ secrets.GITHUB_TOKEN }}	# 发布到其他repo需要提供上面生成的personal access token
+          publish_dir: ./public	# 注意这里指的是要发布哪个文件夹的内容，而不是指发布到目的仓库的什么位置，因为hugo默认生成静态网页到public文件夹，所以这里发布public文件夹里的内容
+          publish_branch: main	# 发布到哪个branch

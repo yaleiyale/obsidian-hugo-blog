@@ -1,0 +1,18 @@
+<link rel="stylesheet" href="/css/tools.css" />
+<!-- katex公式支持 -->
+<link rel="stylesheet" href="https://cdn.staticfile.org/KaTeX/0.16.3/katex.min.css" />
+<script src="https://cdn.staticfile.org/KaTeX/0.16.3/katex.min.js" defer="defer"></script>
+<script src="https://cdn.staticfile.org/KaTeX/0.16.3/contrib/auto-render.min.js" defer="defer"
+  onload='renderMathInElement(document.querySelector("article"), { delimiters: [{left: "$$", right: "$$", display: true}, { left: "$", right: "$", display: false }, {left: "\\(", right: "\\)", display: false}, {left: "\\[", right: "\\]", display: true}]})'></script>
+<!-- mermaid支持 -->
+<script src="https://cdn.staticfile.org/mermaid/9.2.2/mermaid.min.js" async="async" onload='
+          for(let x of document.getElementsByClassName("language-mermaid"))
+            if(x.nodeName=="CODE")
+            {
+              let m = document.createElement("div");
+              m.classList.add("mermaid");
+              m.textContent = x.textContent;
+              x.parentNode.insertAdjacentElement("beforebegin", m);
+            }'></script>
+<!-- 标注支持 -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/yaleiyale/atlas_blog_theme_js@main/callout.js"></script>

@@ -1,0 +1,16 @@
+{{- $data := .Data -}}
+{{- range .Data.Terms.ByCount -}}
+{{- if hasPrefix .Term "游戏/" -}}
+{{- else -}}
+{{- $termLink := printf "/%s/%s/" $data.Plural .Term | urlize -}}
+<h3 id="{{- .Term -}}">{{- .Term -}}</h3>{{- .Count -}}篇
+<ul>
+    {{- range .Pages | first 5 -}}
+    <li><a href="{{- .Permalink -}}">{{- .Title -}}</a></li>
+    {{- end -}}
+    {{- if gt (len .Pages) 5 -}}
+    <li><a href="{{- $termLink -}}">……</a></li>
+    {{- end -}}
+</ul>
+{{- end -}}
+{{- end -}}

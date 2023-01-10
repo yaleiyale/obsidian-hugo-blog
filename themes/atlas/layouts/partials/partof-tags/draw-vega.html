@@ -1,0 +1,18 @@
+{{- partial "vega.html" . -}}
+{{- $.Scratch.Add "tags" slice -}}
+{{- range .Data.Terms.ByCount -}}
+{{- if hasPrefix .Term "游戏/" -}}
+{{- else -}}
+{{- $.Scratch.Add "tags" (dict "tag" .Term "count" .Count) -}}
+{{- end -}}
+{{- end -}}
+<script>
+    vegaEmbed("#vis",
+        {
+            "data": { "values": {{- $.Scratch.Get "tags" -}}},
+        "encoding": {
+        "y": { "field": "tag", "type": "nominal" },
+        "x": { "field": "count", "type": "quantitative" }
+    },
+        "mark": "bar"})
+</script>

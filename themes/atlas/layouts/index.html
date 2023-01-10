@@ -1,0 +1,20 @@
+{{- define "reveal" -}}
+<link rel="stylesheet" href="https://cdn.staticfile.org/reveal.js/4.4.0/reveal.min.css" />
+<link rel="stylesheet" href="https://cdn.staticfile.org/reveal.js/4.4.0/theme/sky.min.css" />
+<style>
+    .reveal h1 {
+        font-family: "LXGW WenKai Lite", sans-serif, KaTeX_Main;
+    }
+</style>
+<script async="async"
+    src="https://fastly.jsdelivr.net/combine/npm/reveal.js@4.4.0/dist/reveal.min.js,npm/reveal.js@4.4.0/plugin/markdown/markdown.min.js"
+    onload="Reveal.initialize({mouseWheel: true, navigationMode: 'linear', plugins: [ RevealMarkdown]});"></script>
+<div class="reveal">
+    <div class="slides">
+        <section data-markdown="" data-separator="{{- .Site.Params.index.separatorh -}}"
+            data-separator-vertical="{{- .Site.Params.index.separatorv -}}" data-background-color="White">
+            <textarea data-template>{{- .Content -}}</textarea>
+        </section>
+    </div>
+</div>
+{{- end -}}

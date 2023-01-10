@@ -1,0 +1,11 @@
+{
+  "accentColor": "",
+  "theme": "system",
+  "cssTheme": "Blue Topaz",
+  "translucency": false,
+  "enabledCssSnippets": [
+    "bluer"
+  ],
+  "showViewHeader": false,
+  "textFontFamily": ""
+}

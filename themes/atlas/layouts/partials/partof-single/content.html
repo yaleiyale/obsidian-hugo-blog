@@ -1,0 +1,31 @@
+{{- $singleContent := .Content -}}
+<!-- 内部链接生成 -->
+{{- range .Site.RegularPages -}}
+{{- $page:= . -}}
+<!-- [[title#XXXX]]式 -->
+{{- $mention := printf "%s%s%s" "\\[\\[" .File.BaseFileName "#\\S+\\]\\]" -}}
+{{- range (findRE $mention $singleContent) -}}
+{{- $label:= strings.TrimSuffix "]]" (strings.TrimPrefix "[[" .) -}}
+{{- $addstring := index (findRE `#[^#]+` $label 1) 0 -}}
+{{- $addstring = lower $addstring -}}
+{{- $href := printf "%s%s" $page.Permalink $addstring -}}
+{{- $link := printf "%s%s%s%s%s" "<a class='obsidian-link' href='" $href "'>" $label "</a>" -}}
+{{- $singleContent = replace $singleContent . $link -}}
+{{- end -}}
+<!-- [[title]]式 -->
+{{- $mention := printf "%s%s%s" "[[" .File.BaseFileName "]]" -}}
+{{- if in $singleContent $mention -}}
+{{- $link := printf "%s%s%s%s%s" "<a class='obsidian-link' href='" .Permalink "'>" .File.BaseFileName "</a>" -}}
+{{- $singleContent = replace $singleContent $mention $link -}}
+{{- end -}}
+{{- end -}}
+<!-- excalidraw -->
+{{- range (findRE `!\[\[[\s\S]+.excalidraw\]\]` $singleContent) -}}
+{{- $label:= strings.TrimSuffix "]]" (strings.TrimPrefix "![[" .) -}}
+{{- $href := printf "%s%s%s" "/excalidraw/" $label ".svg" -}}
+{{- $link := printf "%s%s%s" "<img src='" $href "' alt='excalidraw'>" -}}  
+{{- $singleContent = replace $singleContent . $link -}}
+{{- end -}}
+<content>
+    {{- $singleContent|safeHTML -}}
+</content>

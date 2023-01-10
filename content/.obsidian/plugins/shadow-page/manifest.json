@@ -1,0 +1,10 @@
+{
+	"id": "shadow-page",
+	"name": "ShadowPage",
+	"version": "1.0.0",
+	"minAppVersion": "1.0",
+	"description": "Convert the rendered view to pure markdown.",
+	"author": "yaleiyale",
+	"authorUrl": "https://github.com/yaleiyale",
+	"isDesktopOnly": true
+}
