@@ -2,6 +2,7 @@
 
 ![image](https://user-images.githubusercontent.com/55282569/211509250-51c45d7c-bfe1-428b-a44c-76caebdb774c.png)
 
+注意：出于保护个人信息的考虑，建议将本repo置为private，在main.yml中可配置推送到另一个public的repo进行博客的托管
 特性：
 - 基础markdown渲染
 - 支持引用与标注
