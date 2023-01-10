@@ -3,7 +3,7 @@ name: github pages # 名字自取
 on:
   push:
     branches:
-      - main  # 这里的意思是当 main分支发生push的时候，运行下面的jobs，这里先改为github-actions
+      - master  # 这里的意思是当 main分支发生push的时候，运行下面的jobs，这里先改为github-actions
 
 jobs:
   deploy: # 任务名自取
