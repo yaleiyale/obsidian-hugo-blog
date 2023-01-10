@@ -1,4 +1,4 @@
-baseURL = '你的域名'
+baseURL = 'https://lestua.eu.org/obsidian-hugo-blog/'
 languageCode = 'zh'
 title = '时砂凝几页'
 theme = 'atlas'
