@@ -38,7 +38,7 @@ description = '''
     <i class="fa-brands fa-bilibili fa-fw fa-bounce"></i>
   </a>'''
 [params.donate]
-colaURL = "https://i.imgur.com/9kSi9ER.png"
+colaURL = "https://i.imgur.com/lEvIedR.png"
 donateParams = '''
 <script>
         var myname = "yaleiyale";
